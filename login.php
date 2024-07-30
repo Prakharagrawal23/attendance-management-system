@@ -8,27 +8,40 @@
     <title>LoginPage</title>
 </head>
 <body>
-<h1 class="header1">ATTENDANCE APP</h1>
-<p class="para1">Welcome back! <br> Log in to unlock your attendance dashboard<br> Here we mark your attendance, update your records, and download reports </p>
-    <div class="loginform">
-              <p class="sign" align="center">LOGIN </p>
-             <div class="inputgroup topmarginlarge">
-                    <input type="text" id="txtUsername" required>
-                    <label for="txtUsername" id="lblUsername">USER NAME</label>
-             </div>
+<!-- <h1 class="header1">ATTENDANCE APP</h1> -->
+<!-- <p class="para1">Welcome back! <br> Log in to unlock your attendance dashboard<br> Here we mark your attendance, update your records, and download reports </p> -->
+<section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    
+<div class="signin">
+       <div class="content"> 
+              <h2 class="header1">ATTENDANCE APP</h2>
+              <h2>LOG IN </h2>
+              <div class="form"> 
+                     <div class="inputBox inputgroup topmarginlarge">
+                            <input type="text" id="txtUsername" required>
+                            <label for="txtUsername" id="lblUsername"><i>USER NAME</i></label>
+                     </div>
 
-             <div class="inputgroup topmarginlarge">
-                    <input type="password" id="txtPassword" required>
-                    <label for="txtPassword" id="lblPassword">PASSWORD</label>
-             </div>
-             <div class="divcallforaction topmarginlarge">
-                <button class="btnlogin inactivecolor" id="btnLogin">LOGIN</button>
-             </div>  
+                     <div class="inputBox inputgroup topmarginlarge">
+                            <input type="password" id="txtPassword" required>
+                            <label for="txtPassword" id="lblPassword"><i>PASSWORD</i></label>
+                     </div>
+                     
+                     <div class="inputBox divcallforaction topmarginlarge"> 
+
+                            <input type="submit" value="Login" class="btnlogin inactivecolor" id="btnLogin"> 
+
+                      </div>   
+                     
+                     <div class="inputBox diverror topmarginlarge" id="diverror">
+                            <label class="errormessage" id="errormessage">ERROR GOES HERE</label>
+                     </div>
+             </div> 
              
-             <div class="diverror topmarginlarge" id="diverror">
-              <label class="errormessage" id="errormessage">ERROR GOES HERE</label>
-             </div>
-    </div>
+       </div> 
+</div>
+</section> <!-- partial --> 
+
     <div class="lockscreen" id="lockscreen">
        <div class="spinner" id="spinner"></div>
          <lable class="lblwait topmargin" id="lblwait">PLEASE WAIT</lable>

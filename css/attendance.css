@@ -1,0 +1,473 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --fontsize:.8rem;/*for screen less than 600*/
+    --gap:.3rem;
+    --padding:.4rem;
+    transition: all 600ms;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 196, 255);
+}
+.page
+{    
+    width:min(1200px,95%);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header-area"
+    "session-area"
+    "classlist-area"
+    "classdetails-area"
+    "studentlist-area"
+    ;
+    padding-top:calc(var(--padding)*8);
+    padding-bottom:calc(var(--padding)*8);
+    border-bottom:solid black 1px;
+    animation:fadein 700ms linear;
+}
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.header-area
+{
+   grid-area: header-area; 
+   display:grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-areas: "logo-area logout-area";
+   /*border:solid 1px black;temporary,just to view*/
+   gap:var(--gap);
+   padding:var(--padding);
+   border-bottom:solid 1px rgb(255, 255, 255);
+   color: #663399;
+   transition: all 1s, text-shadow 0.3s;
+    animation: fade-in 2s forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.logo-area
+{
+    grid-area: logo-area;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.logout-area
+{
+    grid-area: logout-area;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.session-area
+{
+   grid-area: session-area; 
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: .5fr 1fr;
+   grid-template-areas: "label-area"
+   "dropdown-area";
+   gap:var(--gap);
+   padding:var(--padding);
+   border-bottom:solid 1px white;
+   animation: fade-in 2s forwards;  
+}
+.label-area
+{
+    grid-area: label-area;
+    font-size: calc(var(--fontsize)*.8);
+    padding-left:calc(var(--padding)*.6);
+}
+.dropdown-area
+{
+    grid-area: dropdown-area;
+    font-size: calc(var(--fontsize)*1);
+    padding-top:calc(var(--padding));
+    padding-bottom:calc(var(--padding));
+}
+.classlist-area
+{
+   grid-area: classlist-area; 
+   display:flex;
+   flex-wrap: wrap;
+   gap:10px;
+   padding:var(--padding);
+   justify-content: center;
+   align-items: center;
+   border-bottom:solid 1px rgb(255, 255, 255);
+   
+}
+.classdetails-area
+{
+   grid-area: classdetails-area; 
+   gap:var(--gap);
+   padding:var(--padding);
+   border-bottom:solid 1px white;
+   text-transform: uppercase;
+}
+.studentlist-area
+{
+   grid-area: studentlist-area; 
+   /*dummy colors;just to view*/
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap:var(--gap);
+   padding:var(--padding);  
+   border-bottom:solid 1px white;
+}
+
+.btnlogout {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.btnlogout:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.btnlogout:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btnlogout:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+.logo
+{
+    font-size: calc(var(--fontsize)*2.6);
+}
+.ddlclass
+{
+    width:100%;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    height: 30px;
+    cursor: pointer;
+    border-bottom:solid 1px blue;   
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    color: #663399;
+    animation: fade-in 2s forwards;
+}
+.label-area{
+    /* border-bottom: solid 1px white; */
+    margin-right: 10px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    animation: fade-in 2s forwards;
+}
+.classcard
+{
+    font-size: calc(var(--fontsize)*1);
+    width:5.5em;
+    height: 4.5em;
+    border-radius: .2em;
+    background-color: rgb(142, 80, 201);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+  
+}
+.classcard:hover{
+    background-color: rgb(58, 43, 226);
+    color:white;
+    animation:tilt 500ms linear;
+}
+@keyframes tilt {
+    0%{transform: rotate(0deg);}
+    15%{transform: rotate(-30deg);}
+    30%{transform: rotate(0deg);}
+    45%{transform: rotate(25deg);}
+    60%{transform: rotate(0deg);}
+    70%{transform: rotate(-20deg);}
+    80%{transform: rotate(0deg);}
+    90%{transform: rotate(10deg);}
+   100%{transform: rotate(0deg);}
+}
+
+.classdetails
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+    "title-area title-area"
+    "code-area ondate-area" ;
+    gap:var(--gap);
+    font-size: var(--fontsize);
+    animation: fade-in 2s forwards;
+
+}
+.title-area
+{
+    grid-area: title-area;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #520b98;
+}
+.code-area
+{
+    grid-area: code-area;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #520b98;
+}
+.ondate-area
+{
+    grid-area: ondate-area;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.ondate-area >input
+{
+    font-size: var(--fontsize);
+    background-color: transparent;
+    border:none;
+    border-bottom:solid 1px rgb(255, 0, 0);
+    outline: none;
+    color: #520b98;
+    
+}
+.studenttlist
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    color: #663399;
+}
+.studenttlist >label{
+    font-size: calc(var(--fontsize)*.8);
+}
+
+.studentdetails
+{
+    display:grid;
+    grid-template-columns: .25fr 1.5fr .4fr;
+    grid-template-rows: 1fr  1fr;
+    grid-template-areas: 
+    "slno-area rollno-area checkbox-area"
+    "name-area name-area checkbox-area"
+    ;
+    gap:var(--gap);
+    width:100%;
+    font-size: var(--fontsize);
+    padding-top:calc(var(--padding)*1.5);
+    padding-bottom:calc(var(--padding)*1.5);
+    border-bottom:solid 1px rgb(255, 255, 255);
+    transition: all 300ms;
+    font-family: 'Open Sans', sans-serif;
+    color: #663399;
+    text-transform: uppercase;  
+    /* box-shadow: 2px 11px 35px 2px rgba(0, 0, 0, 0.14);   */
+    animation: fade-in 2s forwards;
+
+}
+
+.studentdetails:hover
+{
+background-color: rgb(67, 144, 253);
+color:white;
+}
+.reportsection
+{
+    width:100%;
+    font-size: var(--fontsize);
+    padding-top:calc(var(--padding)*1.5);
+    padding-bottom:calc(var(--padding)*1.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btnReport {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Open Sans', sans-serif;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  #btnReport:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  #btnReport:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  #btnReport:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+.checkbox-area
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.checkbox-area >input
+{
+    font-size: var(--fontsize);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+.slno-area
+{
+    grid-area: slno-area;
+}
+.rollno-area
+{
+    grid-area: rollno-area;
+}
+.name-area
+{
+    grid-area: name-area;
+}
+.checkbox-area
+{
+    grid-area: checkbox-area;
+    cursor: pointer;
+}
+.absentcolor
+{
+   background-color: rgb(216, 175, 255);
+}
+.presentcolor
+{
+    background-color: rgb(163, 165, 255);
+}
+@media only screen and (min-width:600px) {
+    *{
+        
+        --fontsize:.9rem;/*for screen less than 767 > 600*/
+    }
+}
+/*if the screen size is larger than 600px*/
+@media only screen and (min-width:767px) {
+    *{
+        
+        --fontsize:1rem;/*for screen  > 767*/   
+    }
+    .session-area
+    {
+    grid-template-columns: .5fr .5fr 1fr .5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "... label-area dropdown-area ...";   
+    }
+    .label-area
+    {
+       display: flex;
+       justify-content: end;
+       align-items: center;
+       padding-left:calc(var(--var)*1);
+    }
+    .classdetails
+    {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "code-area title-area ondate-area";
+        padding-bottom:calc(var(--padding)*1);
+        padding-top:calc(var(--padding)*1);
+    }
+
+    .studentdetails
+    {
+        display:grid;
+        grid-template-columns: 1fr 2fr 3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "slno-area rollno-area name-area checkbox-area";
+       /*removed properties,it means they are the same settings*/
+    }
+    .studentdetails>*
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -23,7 +23,10 @@ session_start();
     <button id="btnLogout">LOGOUT</button>-->
      <div class="page">
         <div class="header-area">
-            <div class="logo-area"> <h2 class="logo">WELLCOME TO ATTENDANCE APP</h2></div>
+            <div class="logo-area"> 
+                <h2 class="logo">Welcome!</h2>
+                <span class="role"></span>
+            </div>
             <div class="logout-area"><button class="btnlogout" id="btnLogout">LOGOUT</button></div>
         </div>
         <div class="session-area">
@@ -131,5 +134,26 @@ session_start();
     <script src="js/attendance.js"></script>
     <!--renamed the files just to keep the filenames
     similar, nothing more than that-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <script>
+            var typeData = new Typed(".role", {
+        strings: [
+            " Attendance Management",
+            " Real-Time Tracking",
+            " Efficient Reporting",
+            " Automated Check-In",
+            " Smart Attendance Solution",
+            " Easy Monitoring",
+            " Custom Reports",
+            " Comprehensive Management",
+            " User-Friendly Interfaces",
+            " Seamless Attendance"
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+        });
+  </script>
 </body>
 </html>

@@ -30,7 +30,14 @@ Make sure everything is working by accessing your project through a web browser:
 
 - Navigate to `http://localhost/your_project_folder` to view your application.
 
-## 4. Troubleshooting
+## 4. Login Credentials
+
+To access the system, use the following credentials:
+
+- **Username**: `prakhar123`
+- **Password**: `prakharagrawal`
+
+## 5. Troubleshooting
 
 - Check the Apache and MySQL logs for any issues.
 - Ensure file permissions are correctly set.

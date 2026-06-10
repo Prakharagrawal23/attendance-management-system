@@ -35,7 +35,7 @@ Make sure everything is working by accessing your project through a web browser:
 To access the system, use the following credentials:
 
 - **Username**: `prakhar123`
-- **Password**: `prakharagrawal`
+- **Password**: `prakharagrawalXYZ`
 
 ## 5. Troubleshooting
 
